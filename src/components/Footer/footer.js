@@ -64,11 +64,7 @@ const Footer = props => {
                         <CmsBlockGroup identifiers={'footer_bottom_links'} />
                         <div className={classes.copyright}>{copyrightText || null}</div>
                     </div>
-                    <div className={classes.colright}>
-                        <div className={classes.logopayment}>
-                            <CmsBlockGroup identifiers={'footer_logo_payment'} />
-                        </div>
-                    </div>
+                    <CmsBlockGroup identifiers={'footer_logo_payment'} />
                 </div>
             </div>
         </footer>
