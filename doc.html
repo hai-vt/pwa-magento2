@@ -1,0 +1,282 @@
+// modify the site footer
+https://developer.adobe.com/commerce/pwa-studio/tutorials/basic-modifications/modify-footer/
+
+//grid css
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+
+<div class="footer-bottom-links">
+    <ul class="social-links">
+        <li>
+            <a href="{{store url=''}}">Facebook</a>
+        </li>
+        <li>
+            <a href="{{store url=''}}">Facebook</a>
+        </li>
+        <li>
+            <a href="{{store url=''}}">Facebook</a>
+        </li>
+    </ul>
+</div>
+
+<div class="block">
+    <div class="block-title">
+        <span>Contact</span>
+    </div>
+    <div class="block-content">
+        <div class="email-contact">
+            <a href="mailto:concierge@trunc.ph">concierge@trunc.ph</a>
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.facebook.com/trunc.ph/">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/trunc.ph">Instagram</a>
+                </li>
+            </ul>
+            <div class="time-hour">Concierge Hours: Daily, 9am-9pm</div>
+        </div>
+        <div class="group-contact">
+            <span class="group-text">
+                Brought to you by
+            </span>
+            <div  class="group-logo">
+                <img src="https://dev-truncph.vinobe.com/pub/media/wysiwyg/trunc/footer/SSI_Group_Life_Logo.png" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="block">
+    <div class="block-title">
+        <span>My Account</span>
+    </div>
+    <div class="block-content">
+        <ul>
+            <li>
+                <a href="{{store url='customer/account'}}">Dashboard</a>
+            </li>
+            <li>
+                <a href="{{store url='sales/order/history'}}">Order History</a>
+            </li>
+            <li>
+                <a href="{{store url='faqs'}}">Faqs</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="block">
+    <div class="block-title">
+        <span>Navigation</span>
+    </div>
+    <div class="block-content">
+        <ul>
+            <li>
+                <a href="{{config path='default'}}">Trunc</a>
+            </li>
+            <li>
+                <a href="{{config path='powder_room_ph'}}">Powder Room</a>
+            </li>
+            <li>
+                <a href="{{config path='trunc_show_ph'}}">Trunc Show</a>
+            </li>
+            <li>
+                <a href="{{config path='trunc_at_home_ph'}}">Trunc At Home</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="{{store url='brands'}}">Brands</a>
+            </li>
+            <li>
+                <a href="{{store url='women'}}">Women</a>
+            </li>
+            <li>
+                <a href="{{store url='men'}}">Men</a>
+            </li>
+            <li>
+                <a href="{{store url='kids-toys'}}">Kids & Toys</a>
+            </li>
+            <li>
+                <a href="{{store url='offers'}}">Offers</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<ul class="footer-bottom-links">
+    <li class="item">
+        <a href="{{store='privacy-policy'}}">Privacy Policy</a>
+    </li>
+    <li class="item">
+        <a href="{{store='terms-conditions'}}">Terms & Conditions</a>
+    </li>
+    <li class="item">
+        <a href="{{store='sitemap'}}">Sitemap</a>
+    </li>
+</ul>
+
+
+<div class="home-section section-shop-by">
+    <div class="row no-gutters">
+        <div class="col-lg-3 trnc-blk-content">
+            <h2>THE INKEY LISTS</h2>
+            <p>Build the perfect skincare routine with clean, high-quality and cruelty-free ingredients</p>
+            <div class="actions"><a class="action">SHOP NOW</a></div>
+        </div>
+        <div class="col-lg-9">
+            <div id="category-slider-demo-23">
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="shop-by-cat-item tablinks"><img src="{{media url="wysiwyg/powderroom/home/0401-powderroom-brand-lush-3.jpeg"}}" alt="">
+                            <div class="cat-detail-holder">
+                                <div class="cat-detail"><a href="{{store url='ecococo?cat=442'}}">SKINCARE</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="shop-by-cat-item tablinks"><img src="{{media url="wysiwyg/powderroom/home/0401-powderroom-brand-lush-2.jpeg"}}" alt="">
+                            <div class="cat-detail-holder">
+                                <div class="cat-detail"><a href="{{store url='powder_room_ph/catalogsearch/result/?q=Ecococo+Body'}}">BODY</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="shop-by-cat-item tablinks"><img src="{{media url="wysiwyg/powderroom/home/0401-powderroom-brand-lush-1.jpeg"}}" alt="">
+                            <div class="cat-detail-holder">
+                                <div class="cat-detail"><a href="{{store url='powder_room_ph/catalogsearch/result/?q=Ecococo+Tools'}}">TOOLS &amp; ACCESSORIES</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home-section section-car2 powder_room_homepage_new_arrivals">
+    <div class="container">
+        <div class="section-title">BEAUTY <span style="font-style: italic;">EDIT</span></div>
+        <div class="section-desc">A guide to your perfect beauty regiment.<br>Featuring the daily skincare routine for every skin type.</div>
+        <div class="tabcontent" style="display: block;">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="100" template="Magento_CatalogWidget::product/widget/content/owl_list.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`441`^]^]"}}</div>
+    </div>
+</div>
+
+
+<div class="home-section section-shop-by">
+    <div class="row no-gutters">
+        <div class="col-lg-3 trnc-blk-content">
+            <h2>THE INKEY LISTS</h2>
+            <p>Build the perfect skincare routine with clean, high-quality and cruelty-free ingredients</p>
+            <div class="actions">
+                <a href="" class="action">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div id="category-slider-demo-23">
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="shop-by-cat-item tablinks">
+                            <img src="{{media url="wysiwyg/powderroom/home/0401-powderroom-brand-lush-3.jpeg"}}" alt="" />
+                            <div class="cat-detail-holder">
+                                <div class="cat-detail">
+                                    <a href="https://magento.preprod2.trunc.ph/powder_room_ph/ecococo?cat=442">SKINCARE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="shop-by-cat-item tablinks">
+                            <img src="{{media url="wysiwyg/powderroom/home/0401-powderroom-brand-lush-2.jpeg"}}" alt="" />
+                            <div class="cat-detail-holder">
+                                <div class="cat-detail">
+                                    <a href="https://magento.preprod2.trunc.ph/powder_room_ph/catalogsearch/result/?q=Ecococo+Body">BODY</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="shop-by-cat-item tablinks">
+                            <img src="{{media url="wysiwyg/powderroom/home/0401-powderroom-brand-lush-1.jpeg"}}" alt="" />
+                            <div class="cat-detail-holder">
+                                <div class="cat-detail">
+                                    <a href="https://magento.preprod2.trunc.ph/powder_room_ph/catalogsearch/result/?q=Ecococo+Tools">TOOLS & ACCESSORIES</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    require([
+                        'jquery',
+                        'owl.carousel/owl.carousel.min'
+                    ], function ($) {
+                        $("#category-slider-demo-23 .owl-carousel").owlCarousel({
+                            items: 3,
+                            autoplay: false,
+                            autoplayHoverPause: false,
+                            margin: 0,
+                            nav: false,
+                            navText: ["<em class='porto-icon-left-open-big'></em>","<em class='porto-icon-right-open-big'></em>"],
+                            dots: false,
+                            loop: false,
+                            responsive: {
+                                0: {
+                                    items:1,
+                                    onDragged: function(me) {
+                                        $(me.target).find(".owl-item.active").each(function(i, v) {
+                                            $(v).find('.shop-by-cat-item').trigger('click');
+                                        });
+                                    },
+                                },
+                                560: {
+                                    items:1,
+                                    onDragged: function(me) {
+                                        $(me.target).find(".owl-item.active").each(function(i, v) {
+                                            $(v).find('.shop-by-cat-item').trigger('click');
+                                        });
+                                    },
+                                },
+                                768: {
+                                    items:3
+                                }
+                            },
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home-section section-car2 powder_room_homepage_new_arrivals">
+    <div class="container">
+        <div class="section-title">BEAUTY <span style="font-style:italic;">EDIT</span></div>
+        <div class="section-desc">
+            A guide to your perfect beauty regiment.<br/>
+            Featuring the daily skincare routine for every skin type.
+        </div>
+        <div class="tabcontent" style="display: block;">
+            {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="100" template="Magento_CatalogWidget::product/widget/content/owl_list.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`441`^]^]"}}
+        </div>
+    </div>
+    <script type="text/javascript" xml="space">// <![CDATA[
+    require([
+        'jquery',
+        'owl.carousel/owl.carousel.min'
+    ], function ($) {
+        var bestseller_owl = $(".section-car2 .owl-carousel");
+        bestseller_owl.owlCarousel({
+            loop: false,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            smartSpeed: 300,
+            autoplayHoverPause: false,
+            margin: 15,
+            dots: false,
+            nav: true,
+            navText: ["<em class='porto-icon-left-open-big'></em>","<em class='porto-icon-right-open-big'></em>"],
+            responsive: { 0: { items:2 }, 768: { items:3 }, 992: { items:4 }, 1200: { items:4 } }
+        });
+    });
+    // ]]></script>
+</div>

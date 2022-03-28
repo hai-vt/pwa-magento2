@@ -63,6 +63,7 @@
 }
 
 .links :global(.richContent-root-CMO .block .block-title) {
+    font-family: 'Cochin';
     font-weight: 600;
     margin: 0 0 10px;
 }
@@ -224,6 +225,8 @@
 
 :global(.richContent-root-CMO .footer-bottom-links) {
     display: flex;
+    padding: 0;
+    margin: 0 0 10px;
 }
 
 :global(.richContent-root-CMO .footer-bottom-links li:after) {

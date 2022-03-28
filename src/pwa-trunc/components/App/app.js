@@ -25,6 +25,7 @@ const OnlineIcon = <Icon src={WifiIcon} attrs={{ width: 18 }} />;
 const OfflineIcon = <Icon src={CloudOffIcon} attrs={{ width: 18 }} />;
 const ErrorIcon = <Icon src={AlertCircleIcon} attrs={{ width: 18 }} />;
 
+
 const App = props => {
     const { markErrorHandled, renderError, unhandledErrors } = props;
     const { formatMessage } = useIntl();

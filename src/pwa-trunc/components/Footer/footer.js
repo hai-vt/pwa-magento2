@@ -7,7 +7,7 @@ import { useFooter } from '@magento/peregrine/lib/talons/Footer/useFooter';
 
 import Newsletter from '../Newsletter';
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import defaultClasses from './footer.module.css';
+import defaultClasses from './footer.scss';
 import { DEFAULT_LINKS } from './sampleData';
 import CmsBlockGroup from "@magento/venia-ui/lib/components/CmsBlock";
 
