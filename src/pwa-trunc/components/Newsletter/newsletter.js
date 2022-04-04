@@ -15,7 +15,7 @@ import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator'
 import TextInput from '@magento/venia-ui/lib/components/TextInput';
 import LinkButton from '@magento/venia-ui/lib/components/LinkButton';
 import Shimmer from '@magento/venia-ui/lib/components/Newsletter/newsletter.shimmer';
-import defaultClasses from './newsletter.module.css';
+import defaultClasses from './newsletter.less';
 
 const Newsletter = props => {
     const { formatMessage } = useIntl();

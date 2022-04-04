@@ -83,6 +83,15 @@
 .links :global(.richContent-root-CMO .social-links) {
     display: flex;
     margin: 10px 0 !important;
+
+    li {
+        a {
+            &:before {
+                font-family: var(--venia-global-fontFamily-icon);
+                content: "\e915";
+            }
+        }
+    }
 }
 
 .links :global(.richContent-root-CMO .social-links li) {
