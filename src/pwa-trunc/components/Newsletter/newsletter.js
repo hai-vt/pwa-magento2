@@ -70,7 +70,7 @@ const Newsletter = props => {
             {maybeLoadingIndicator}
             <span className={classes.title}>
                 <FormattedMessage
-                    id={'newsletter.titleText'}
+                    id={'newsletter.infotitleText'}
                     defaultMessage={'Be the first to know'}
                 />
             </span>

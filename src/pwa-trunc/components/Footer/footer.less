@@ -85,17 +85,26 @@
     margin: 10px 0 !important;
 
     li {
+        margin-right: 10px;
+
         a {
+            font-size: 0;
+
             &:before {
                 font-family: var(--venia-global-fontFamily-icon);
-                content: "\e915";
+                content: '\f833';
+                font-size: 20px;
+            }
+
+            &:hover {
+                text-decoration: none;
             }
         }
     }
 }
 
-.links :global(.richContent-root-CMO .social-links li) {
-    margin-right: 10px;
+.links :global(.richContent-root-CMO .social-links li.instagram a:before) {
+    content: '\f83d';
 }
 
 .links :global(.richContent-root-CMO .group-contact) {

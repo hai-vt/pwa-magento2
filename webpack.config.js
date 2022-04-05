@@ -2,7 +2,7 @@ const { configureWebpack, graphQL } = require('@magento/pwa-buildpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const fs = require('fs');
-const { promisify } = require('util');
+const {promisify} = require('util');
 
 const {
     getMediaURL,
@@ -11,7 +11,7 @@ const {
     getPossibleTypes
 } = graphQL;
 
-const { DefinePlugin } = webpack;
+const {DefinePlugin} = webpack;
 // const { LimitChunkCountPlugin } = webpack.optimize;
 
 const getCleanTemplate = templateFile => {
@@ -60,7 +60,7 @@ module.exports = async env => {
 
     const mediaUrl = await getMediaURL();
     const storeConfigData = await getStoreConfigData();
-    const { availableStores } = await getAvailableStoresConfigData();
+    const {availableStores} = await getAvailableStoresConfigData();
     const writeFile = promisify(fs.writeFile);
 
     /**
@@ -69,7 +69,7 @@ module.exports = async env => {
      * given store code instead of the default one.
      */
     const availableStore = availableStores.find(
-        ({ code }) => code === process.env.STORE_VIEW_CODE
+        ({code}) => code === process.env.STORE_VIEW_CODE
     );
 
     global.MAGENTO_MEDIA_BACKEND_URL = mediaUrl;
@@ -128,6 +128,30 @@ module.exports = async env => {
         new HTMLWebpackPlugin(htmlWebpackConfig)
     ];
 
+    /* Config Less */
+    config.module.rules.push({
+        test: /\.less$/,
+        use: [
+            'style-loader',
+            {
+                loader: 'css-loader',
+                options: {
+                    importLoaders: 1,
+                    modules: {
+                        localIdentName: '[name]__[local]___[hash:base64:5]'
+                    }
+                }
+            },
+            'less-loader'
+        ]
+    });
+
+    /* Config Font */
+    /*config.module.rules.push({
+        test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000'
+    });*/
+
+
     /*
     Commenting out this section until SSR is fully implemented
     */
@@ -183,23 +207,6 @@ module.exports = async env => {
     //         maxChunks: 1
     //     })
     // );
-
-    /*config.module.rules.push({
-           test: /\.s[ca]ss$/,
-           use: [
-               'style-loader',
-               {
-                   loader: 'css-loader',
-                   options: {
-                       modules: {
-                           localIdentName: "[abc]__[local]___[hash:base64:5]"
-                       },
-                       sourceMap: true
-                   }
-           },
-           'sass-loader'
-       ]
-   });*/
 
     return [config];
 };
