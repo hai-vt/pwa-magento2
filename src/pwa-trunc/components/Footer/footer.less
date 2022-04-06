@@ -21,6 +21,7 @@
 
 .root ul li a {
     text-decoration: none;
+    font-weight: var(--venia-global-fontWeight-thin);
 }
 
 .root ul li a:hover {
@@ -33,10 +34,11 @@
     padding-right: 3%;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 991px) {
     .root {
         grid-template-areas: 'links' 'brand';
         max-width: 960px;
+        padding-top: 20px;
     }
 }
 
@@ -63,8 +65,9 @@
 }
 
 .links :global(.richContent-root-CMO .block .block-title) {
-    font-family: 'Cochin';
-    font-weight: 600;
+    font-family: var(--venia-global-fontFamily-serif);
+    font-size: var(--venia-global-fontSize-200);
+    font-weight: var(--venia-global-fontWeight-normal);
     margin: 0 0 10px;
 }
 
@@ -80,12 +83,17 @@
     grid-template-columns: 4fr 4fr 4fr;
 }
 
-.links :global(.richContent-root-CMO .social-links) {
+.contactgroup :global(.richContent-root-CMO .social-links) {
     display: flex;
     margin: 10px 0 !important;
+    padding: 0;
 
     li {
         margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         a {
             font-size: 0;
@@ -103,19 +111,17 @@
     }
 }
 
-.links :global(.richContent-root-CMO .social-links li.instagram a:before) {
+.contactgroup :global(.richContent-root-CMO .social-links li.instagram a:before) {
     content: '\f83d';
 }
 
-.links :global(.richContent-root-CMO .group-contact) {
-    margin-top: 20px;
+.contactgroup :global(.richContent-root-CMO .email-contact) {
+    font-weight: var(--venia-global-fontWeight-thin);
 }
 
-@media (max-width: 960px) {
-    .links {
-        grid-auto-flow: row;
-        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    }
+.contactgroup :global(.richContent-root-CMO .group-contact) {
+    margin-top: 20px;
+    font-weight: var(--venia-global-fontWeight-thin);
 }
 
 .linkGroup {
@@ -155,15 +161,9 @@
     min-width: 20rem;
 }
 
-@media (max-width: 960px) {
-    .callout {
-        justify-self: start;
-    }
-}
-
 .calloutHeading {
     font-size: var(--venia-typography-body-S-fontSize);
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
@@ -194,22 +194,11 @@
     gap: 10px;
     grid-template-columns: 9fr 3fr;
     padding: 20px 0 0;
+    font-weight: var(--venia-global-fontWeight-thin);
 }
 
 .branding .colright {
     padding-left: 15px;
-}
-
-@media (max-width: 960px) {
-    .branding {
-        gap: 1rem;
-        grid-auto-flow: row;
-        grid-template-areas: 'a' 'b';
-        grid-template-columns: auto;
-        height: auto;
-        justify-items: center;
-        text-align: center;
-    }
 }
 
 .legal {
@@ -218,27 +207,6 @@
     gap: 1rem;
     grid-auto-flow: column;
     justify-content: start;
-}
-
-@media (max-width: 960px) {
-    .legal {
-        justify-content: center;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .callout {
-        min-width: 10rem;
-    }
-}
-@media screen and (max-width: 767px) {
-    .links {
-        padding: 0 1rem;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem 10px;
-    }
-    .callout {
-        min-width: 100%;
-    }
 }
 
 :global(.richContent-root-CMO .footer-bottom-links) {
@@ -260,4 +228,61 @@
 
 .branding :global(.richContent-root-CMO img) {
     margin: 0
+}
+
+.showonmobile {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .links {
+        grid-template-columns: 12fr;
+        text-align: center;
+
+        :global(.cmsBlock-root-x7v) {
+            display: none;
+        }
+    }
+
+    .showonmobile {
+        display: block;
+    }
+
+    .contactgroup {
+        text-align: center;
+        margin-top: 20px;
+
+        :global(.richContent-root-CMO .block-title) {
+            text-transform: uppercase;
+        }
+
+        :global(.richContent-root-CMO .social-links) {
+            justify-content: center;
+        }
+
+        :global(.cmsBlock-content-QZe img) {
+            margin: auto;
+        }
+    }
+
+    .branding {
+        grid-auto-flow: row;
+        grid-template-columns: 12fr;
+        text-align: center;
+
+        .colleft {
+            margin: auto;
+            text-align: center;
+            order: 1;
+
+            :global(.richContent-root-CMO) {
+                display: none;
+            }
+        }
+
+        :global(.cmsBlock-root-x7v) {
+            margin: auto;
+            order: 0;
+        }
+    }
 }

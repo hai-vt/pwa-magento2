@@ -13,16 +13,17 @@
 
 .form input {
     padding-right: calc(1.875rem * var(--iconsAfter) + 5.625rem);
-    border: 1px solid #fff;
+    border: 1px solid transparent;
     border-radius: 0;
     height: 32px;
+
+    &:focus:enabled {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
-.form input:focus {
-    box-shadow: none;
-}
-
-.form label {
+.form :global(.field-label-zVe) {
     position: absolute;
     z-index: -11111;
 }
@@ -38,8 +39,8 @@
 
 .title {
     font-family: var(--venia-global-fontFamily-serif);
-    font-size: var(--venia-typography-body-S-fontSize);
-    font-weight: 600;
+    font-size: var(--venia-global-fontSize-200);
+    font-weight: var(--venia-global-fontWeight-normal);
     margin-bottom: 15px;
     display: block;
 }
@@ -71,6 +72,7 @@
 
 .newsletter_text {
     margin-bottom: 20px;
+    font-weight: var(--venia-global-fontWeight-thin);
 }
 
 .loadingContainer {
@@ -82,8 +84,12 @@
     z-index: 1;
     background: rgba(252, 252, 252, 0.75);
 }
-
-@media screen and (max-width: 767px) {
+:global(.checkbox-label-wHh) {
+    color: #fff;
+    font-size: var(--venia-global-fontSize-100);
+    font-weight: var(--venia-global-fontWeight-thin);
+}
+@media screen and (max-width: 991px) {
     /*.buttonsContainer {
         display: grid;
     }*/
@@ -91,6 +97,11 @@
     /*.subscribe_link {
         display: none;
     }*/
+
+    .title {
+        text-transform: uppercase;
+        font-family: var(--venia-global-fontFamily-sansSerif);
+    }
 
     .root {
         text-align: center;

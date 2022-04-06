@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Facebook, Instagram } from 'react-feather';
+import clsx from  'clsx';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { shape, string } from 'prop-types';
@@ -55,9 +55,12 @@ const Footer = props => {
     return (
         <footer className={classes.root} data-cy="Footer-root">
             <div className={classes.container}>
-                <div className={classes.links}>
+                <div className={clsx(classes.links, classes.contactgroup)}>
                     <CmsBlockGroup identifiers={['footer_contact', 'footer_account_links', 'footer_navigation_links']} />
                     <Newsletter />
+                </div>
+                <div className={clsx(classes.showonmobile, classes.contactgroup)}>
+                    <CmsBlockGroup identifiers={['footer_contact']} />
                 </div>
                 <div className={classes.branding}>
                     <div className={classes.colleft}>

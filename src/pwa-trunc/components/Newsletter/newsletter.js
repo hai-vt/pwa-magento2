@@ -16,6 +16,7 @@ import TextInput from '@magento/venia-ui/lib/components/TextInput';
 import LinkButton from '@magento/venia-ui/lib/components/LinkButton';
 import Shimmer from '@magento/venia-ui/lib/components/Newsletter/newsletter.shimmer';
 import defaultClasses from './newsletter.less';
+import Checkbox from "@magento/venia-ui/lib/components/Checkbox";
 
 const Newsletter = props => {
     const { formatMessage } = useIntl();
@@ -103,6 +104,7 @@ const Newsletter = props => {
                         autoComplete="email"
                         field="email"
                         id="email"
+                        placeholder="Email Address"
                         validate={isRequired}
                     />
                 </Field>
@@ -130,6 +132,8 @@ const Newsletter = props => {
                         />
                     </Button>
                 </div>
+                <Checkbox validate={isRequired} field={'newsletter'} label={'By subscribing, you agree to the Privacy Policy and Terms & Conditions of this website.'}>
+                </Checkbox>
             </Form>
         </div>
     );
